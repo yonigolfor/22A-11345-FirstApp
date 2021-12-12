@@ -12,32 +12,51 @@
         android:layout_height="171dp"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/distanceCounter_LBL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+
+            android:padding="50px"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="80px"/>
+
         <ImageView
             android:id="@+id/star_1_life"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5px"
+            android:layout_margin="10px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            app:srcCompat="@drawable/heart" />
 
         <ImageView
             android:id="@+id/star_2_life"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5px"
+            android:layout_margin="10px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/star_1_life"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            app:srcCompat="@drawable/heart" />
 
         <ImageView
             android:id="@+id/star_3_life"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5px"
+            android:layout_margin="10px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/star_2_life"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            app:srcCompat="@drawable/heart" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -52,78 +71,130 @@
         <LinearLayout
             android:layout_width="138dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin00"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock00"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
 
-            <LinearLayout
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin10"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
 
-            <LinearLayout
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin20"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock20"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin30"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock30"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin40"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock40"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/car_image_left"
+                    android:id="@+id/coin50"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock50"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_directions_car_24" />
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/car_image_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/car" />
 
             </LinearLayout>
 
@@ -133,78 +204,127 @@
         <LinearLayout
             android:layout_width="138dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin01"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock01"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin11"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin21"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock21"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin31"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock31"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin41"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock41"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/car_image_center"
+                    android:id="@+id/coin51"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock51"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_directions_car_24" />
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/car_image_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/car" />
             </LinearLayout>
 
         </LinearLayout>
@@ -213,81 +333,395 @@
         <LinearLayout
             android:layout_width="138dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin02"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock02"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin12"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin22"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock22"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin32"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock32"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin42"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
 
                 <ImageView
                     android:id="@+id/rock42"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_emoji_people_24" />
-            </LinearLayout>
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="68dp"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/car_image_right"
+                    android:id="@+id/coin52"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock52"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_baseline_directions_car_24" />
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/car_image_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/car" />
             </LinearLayout>
 
         </LinearLayout>
+
+<!--        4th col-->
+
+        <LinearLayout
+            android:layout_width="138dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin03"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin13"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin23"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin33"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock33"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin43"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock43"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin53"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock53"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/car_image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/car" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        5th col-->
+
+        <LinearLayout
+            android:layout_width="138dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin04"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin14"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin24"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin34"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock34"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin44"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock44"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coin54"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    app:srcCompat="@drawable/coin" />
+
+                <ImageView
+                    android:id="@+id/rock54"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/rock" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/car_image_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/car" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
