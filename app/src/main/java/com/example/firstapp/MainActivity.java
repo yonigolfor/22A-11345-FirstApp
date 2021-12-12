@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
     boolean isArrowsPassed;
     private TextView distanceCounter;
     private String userName = "";
-    //private Leaderboard leaderboard;
-
 
     private double longitude;
     private double latitude;
@@ -56,47 +54,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnLeft;
     private ImageButton btnRight;
 
-    // setting rocks
-    private ImageView rock00;
-    private ImageView rock01;
-    private ImageView rock02;
-    private ImageView rock03;
-    private ImageView rock04;
-    private ImageView rock10;
-    private ImageView rock11;
-    private ImageView rock12;
-    private ImageView rock13;
-    private ImageView rock14;
-    private ImageView rock20;
-    private ImageView rock21;
-    private ImageView rock22;
-    private ImageView rock23;
-    private ImageView rock24;
-    private ImageView rock30;
-    private ImageView rock31;
-    private ImageView rock32;
-    private ImageView rock33;
-    private ImageView rock34;
-    private ImageView rock40;
-    private ImageView rock41;
-    private ImageView rock42;
-    private ImageView rock43;
-    private ImageView rock44;
-    private ImageView rock50;
-    private ImageView rock51;
-    private ImageView rock52;
-    private ImageView rock53;
-    private ImageView rock54;
-
-
-    private ImageView[][]imgs = {
-            {rock00, rock01, rock02, rock03, rock04},
-            {rock10, rock11, rock12, rock13, rock14},
-            {rock20, rock21, rock22, rock23, rock24},
-            {rock30, rock31, rock32, rock33, rock34},
-            {rock40, rock41, rock42, rock43, rock44},
-            {rock50, rock51, rock52, rock53, rock54}
-    };
+    // setting rocks + coins
+    private ImageView[][] imgs = new ImageView[6][5];
     private ImageView[][]coins = new ImageView[6][5];
 
 
@@ -190,15 +149,8 @@ public class MainActivity extends AppCompatActivity {
             public void onLocationChanged(Location location) {
                 latitude = location.getLatitude();
                 longitude = location.getLongitude();
-                System.out.println("lat: " + latitude + " lon: " + longitude);
             }
         };
-
-//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-//        } else {
-//            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 1, locationListener);
-//        }
 
 
         handleLoc();
@@ -206,11 +158,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleLoc() {
         boolean gps_enabled = false;
-        boolean network_enabled = false;
-        Location gps_loc = null, net_loc = null;
+        Location gps_loc = null;
 
         gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-        network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
@@ -218,13 +168,15 @@ public class MainActivity extends AppCompatActivity {
             lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 1, locationListener);
         }
 
-        if (gps_enabled)
+        if (gps_enabled){
             gps_loc = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        if (network_enabled)
-            net_loc = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            latitude = gps_loc.getLatitude();
+            longitude = gps_loc.getLongitude();
+        }
 
-        latitude = gps_loc.getLatitude();
-        longitude = gps_loc.getLongitude();
+
+
+
 
     }
 
@@ -410,67 +362,36 @@ public class MainActivity extends AppCompatActivity {
 
     private void setRocks() {
 
-        rock00 = findViewById(R.id.rock00);
-        rock01 = findViewById(R.id.rock01);
-        rock02 = findViewById(R.id.rock02);
-        rock03 = findViewById(R.id.rock03);
-        rock04 = findViewById(R.id.rock04);
-        rock10 = findViewById(R.id.rock10);
-        rock11 = findViewById(R.id.rock11);
-        rock12 = findViewById(R.id.rock12);
-        rock13 = findViewById(R.id.rock13);
-        rock14 = findViewById(R.id.rock14);
-        rock20 = findViewById(R.id.rock20);
-        rock21 = findViewById(R.id.rock21);
-        rock22 = findViewById(R.id.rock22);
-        rock23 = findViewById(R.id.rock23);
-        rock24 = findViewById(R.id.rock24);
-        rock30 = findViewById(R.id.rock30);
-        rock31 = findViewById(R.id.rock31);
-        rock32 = findViewById(R.id.rock32);
-        rock33 = findViewById(R.id.rock33);
-        rock34 = findViewById(R.id.rock34);
-        rock40 = findViewById(R.id.rock40);
-        rock41 = findViewById(R.id.rock41);
-        rock42 = findViewById(R.id.rock42);
-        rock43 = findViewById(R.id.rock43);
-        rock44 = findViewById(R.id.rock44);
-        rock50 = findViewById(R.id.rock50);
-        rock51 = findViewById(R.id.rock51);
-        rock52 = findViewById(R.id.rock52);
-        rock53 = findViewById(R.id.rock53);
-        rock54 = findViewById(R.id.rock54);
-
-        imgs[0][0] = rock00;
-        imgs[0][1] = rock01;
-        imgs[0][2] = rock02;
-        imgs[0][3] = rock03;
-        imgs[0][4] = rock04;
-        imgs[1][0] = rock10;
-        imgs[1][1] = rock11;
-        imgs[1][2] = rock12;
-        imgs[1][3] = rock13;
-        imgs[1][4] = rock14;
-        imgs[2][0] = rock20;
-        imgs[2][1] = rock21;
-        imgs[2][2] = rock22;
-        imgs[2][3] = rock23;
-        imgs[2][4] = rock24;
-        imgs[3][0] = rock30;
-        imgs[3][1] = rock31;
-        imgs[3][2] = rock32;
-        imgs[3][3] = rock33;
-        imgs[3][4] = rock34;
-        imgs[4][0] = rock40;
-        imgs[4][1] = rock41;
-        imgs[4][2] = rock42;
-        imgs[4][3] = rock43;
-        imgs[4][4] = rock44;
-        imgs[5][0] = rock50;
-        imgs[5][1] = rock51;
-        imgs[5][2] = rock52;
-        imgs[5][3] = rock53;
-        imgs[5][4] = rock54;
+        imgs[0][0] = findViewById(R.id.rock00);
+        imgs[0][1] = findViewById(R.id.rock01);
+        imgs[0][2] = findViewById(R.id.rock02);
+        imgs[0][3] = findViewById(R.id.rock03);
+        imgs[0][4] = findViewById(R.id.rock04);
+        imgs[1][0] = findViewById(R.id.rock10);
+        imgs[1][1] = findViewById(R.id.rock11);
+        imgs[1][2] = findViewById(R.id.rock12);
+        imgs[1][3] = findViewById(R.id.rock13);
+        imgs[1][4] = findViewById(R.id.rock14);
+        imgs[2][0] = findViewById(R.id.rock20);
+        imgs[2][1] = findViewById(R.id.rock21);
+        imgs[2][2] = findViewById(R.id.rock22);
+        imgs[2][3] = findViewById(R.id.rock23);
+        imgs[2][4] = findViewById(R.id.rock24);
+        imgs[3][0] = findViewById(R.id.rock30);
+        imgs[3][1] = findViewById(R.id.rock31);
+        imgs[3][2] = findViewById(R.id.rock32);
+        imgs[3][3] = findViewById(R.id.rock33);
+        imgs[3][4] = findViewById(R.id.rock34);
+        imgs[4][0] = findViewById(R.id.rock40);
+        imgs[4][1] = findViewById(R.id.rock41);
+        imgs[4][2] = findViewById(R.id.rock42);
+        imgs[4][3] = findViewById(R.id.rock43);
+        imgs[4][4] = findViewById(R.id.rock44);
+        imgs[5][0] = findViewById(R.id.rock50);
+        imgs[5][1] = findViewById(R.id.rock51);
+        imgs[5][2] = findViewById(R.id.rock52);
+        imgs[5][3] = findViewById(R.id.rock53);
+        imgs[5][4] = findViewById(R.id.rock54);
 
         coins[0][0] = findViewById(R.id.coin00);
         coins[0][1] = findViewById(R.id.coin01);
@@ -509,36 +430,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void invisibleAll() {
-        rock00.setVisibility(View.INVISIBLE);
-        rock01.setVisibility(View.INVISIBLE);
-        rock02.setVisibility(View.INVISIBLE);
-        rock03.setVisibility(View.INVISIBLE);
-        rock04.setVisibility(View.INVISIBLE);
-        rock10.setVisibility(View.INVISIBLE);
-        rock11.setVisibility(View.INVISIBLE);
-        rock12.setVisibility(View.INVISIBLE);
-        rock13.setVisibility(View.INVISIBLE);
-        rock14.setVisibility(View.INVISIBLE);
-        rock20.setVisibility(View.INVISIBLE);
-        rock21.setVisibility(View.INVISIBLE);
-        rock22.setVisibility(View.INVISIBLE);
-        rock23.setVisibility(View.INVISIBLE);
-        rock24.setVisibility(View.INVISIBLE);
-        rock30.setVisibility(View.INVISIBLE);
-        rock31.setVisibility(View.INVISIBLE);
-        rock32.setVisibility(View.INVISIBLE);
-        rock33.setVisibility(View.INVISIBLE);
-        rock34.setVisibility(View.INVISIBLE);
-        rock40.setVisibility(View.INVISIBLE);
-        rock41.setVisibility(View.INVISIBLE);
-        rock42.setVisibility(View.INVISIBLE);
-        rock43.setVisibility(View.INVISIBLE);
-        rock44.setVisibility(View.INVISIBLE);
-        rock50.setVisibility(View.INVISIBLE);
-        rock51.setVisibility(View.INVISIBLE);
-        rock52.setVisibility(View.INVISIBLE);
-        rock53.setVisibility(View.INVISIBLE);
-        rock54.setVisibility(View.INVISIBLE);
+        imgs[0][0].setVisibility(View.INVISIBLE);
+        imgs[0][1].setVisibility(View.INVISIBLE);
+        imgs[0][2].setVisibility(View.INVISIBLE);
+        imgs[0][3].setVisibility(View.INVISIBLE);
+        imgs[0][4].setVisibility(View.INVISIBLE);
+        imgs[1][0].setVisibility(View.INVISIBLE);
+        imgs[1][1].setVisibility(View.INVISIBLE);
+        imgs[1][2].setVisibility(View.INVISIBLE);
+        imgs[1][3].setVisibility(View.INVISIBLE);
+        imgs[1][4].setVisibility(View.INVISIBLE);
+        imgs[2][0].setVisibility(View.INVISIBLE);
+        imgs[2][1].setVisibility(View.INVISIBLE);
+        imgs[2][2].setVisibility(View.INVISIBLE);
+        imgs[2][3].setVisibility(View.INVISIBLE);
+        imgs[2][4].setVisibility(View.INVISIBLE);
+        imgs[3][0].setVisibility(View.INVISIBLE);
+        imgs[3][1].setVisibility(View.INVISIBLE);
+        imgs[3][2].setVisibility(View.INVISIBLE);
+        imgs[3][3].setVisibility(View.INVISIBLE);
+        imgs[3][4].setVisibility(View.INVISIBLE);
+        imgs[4][0].setVisibility(View.INVISIBLE);
+        imgs[4][1].setVisibility(View.INVISIBLE);
+        imgs[4][2].setVisibility(View.INVISIBLE);
+        imgs[4][3].setVisibility(View.INVISIBLE);
+        imgs[4][4].setVisibility(View.INVISIBLE);
+        imgs[5][0].setVisibility(View.INVISIBLE);
+        imgs[5][1].setVisibility(View.INVISIBLE);
+        imgs[5][2].setVisibility(View.INVISIBLE);
+        imgs[5][3].setVisibility(View.INVISIBLE);
+        imgs[5][4].setVisibility(View.INVISIBLE);
 
         coins[0][0].setVisibility(View.INVISIBLE);
         coins[0][1].setVisibility(View.INVISIBLE);
